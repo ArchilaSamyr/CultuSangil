@@ -1,0 +1,483 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3ebdd;
+    color: #45372d;
+}
+
+/* MENU */
+
+.navbar {
+    background-color: #fffdf8;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #355b43;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    background-color: #355b43;
+    color: white;
+    padding: 9px;
+    border-radius: 8px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #45372d;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #b18b4d;
+}
+
+.btn-login {
+    background-color: #355b43;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    background:
+        linear-gradient(90deg, rgba(25, 45, 32, .9), rgba(25, 45, 32, .35)),
+        url('../img/portada.jpg') center/cover no-repeat,
+        #355b43;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.subtitulo {
+    color: #e4c58b;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content > p:not(.subtitulo) {
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: #d7b77a;
+    color: #45372d;
+    padding: 14px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* BIENVENIDA */
+
+.bienvenida {
+    text-align: center;
+    padding: 75px 10%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.etiqueta {
+    color: #9b783e;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.bienvenida h2,
+.titulo-seccion h2 {
+    font-size: 32px;
+    color: #355b43;
+    margin-bottom: 20px;
+}
+
+.bienvenida > p:last-child {
+    line-height: 1.8;
+    color: #68594c;
+}
+
+/* TARJETAS */
+
+.secciones {
+    padding: 55px 7%;
+    background-color: #fffdf8;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.tarjeta {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.imagen-tarjeta {
+    height: 210px;
+    background-position: center;
+    background-size: cover;
+}
+
+.historia {
+    background-image: url('../img/historia.jpg');
+    background-color: #8c775b;
+}
+
+.cultura {
+    background-image: url('../img/cultura.jpg');
+    background-color: #657e55;
+}
+
+.turismo {
+    background-image: url('../img/turismo.jpg');
+    background-color: #72949a;
+}
+
+.contenido-tarjeta {
+    padding: 22px;
+}
+
+.contenido-tarjeta h3 {
+    color: #355b43;
+    margin-bottom: 12px;
+}
+
+.contenido-tarjeta p {
+    line-height: 1.6;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.contenido-tarjeta a {
+    color: #94713b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* INVITACION */
+
+.invitacion {
+    background-color: #355b43;
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.invitacion h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.invitacion p {
+    margin-bottom: 25px;
+}
+
+/* PIE DE PAGINA */
+
+footer {
+    background-color: #302d27;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    color: #d7b77a;
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 8px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 430px;
+        padding: 45px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .menu {
+        gap: 13px;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .bienvenida h2,
+    .titulo-seccion h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* PAGINA DE LUGARES */
+
+.pagina-lugares {
+    padding: 60px 7%;
+    min-height: 500px;
+}
+
+.encabezado-lugares {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.encabezado-lugares h1 {
+    color: #355b43;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.encabezado-lugares p {
+    line-height: 1.7;
+}
+
+.lista-lugares {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.tarjeta-lugar {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.tarjeta-lugar img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.contenido-lugar {
+    padding: 22px;
+}
+
+.contenido-lugar h2 {
+    color: #355b43;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.contenido-lugar p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.contenido-lugar span {
+    color: #94713b;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+    .lista-lugares {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .lista-lugares {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-lugares h1 {
+        font-size: 27px;
+    }
+}
+
+
+/* PAGINA DE HISTORIA */
+
+.encabezado-historia {
+    background: #355b43;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo-historia {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.encabezado-historia nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.encabezado-historia nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.pagina-historia {
+    background: #f3ebdd;
+    min-height: 600px;
+}
+
+.portada-historia {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.portada-historia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portada-historia div {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.portada-historia h1 {
+    font-size: 38px;
+}
+
+.contenido-historia {
+    max-width: 1000px;
+    margin: auto;
+    padding: 45px 25px;
+}
+
+.contenido-historia h2 {
+    color: #355b43;
+    margin: 30px 0 15px;
+}
+
+.contenido-historia p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.fechas-historia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.fechas-historia article {
+    background: white;
+    padding: 22px;
+    border-radius: 10px;
+    border-left: 5px solid #d7b77a;
+}
+
+.fechas-historia h3 {
+    color: #355b43;
+    margin-bottom: 10px;
+}
+
+.pie-historia {
+    background: #355b43;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .fechas-historia {
+        grid-template-columns: 1fr;
+    }
+
+    .portada-historia h1 {
+        font-size: 28px;
+    }
+}
